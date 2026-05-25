@@ -9,5 +9,8 @@ item_5 = float(input("Enter price of item 5: "))
 #calculate the subtotal of those five items
 subtotal = item_1 + item_2 + item_3 + item_4 + item_5
 #Add 7% taxes
+total_with_taxes = (subtotal * 0.07) + subtotal
 #display the subtotal, tax amount, and grand total
-print(subtotal, '.2f')
+print(format(subtotal, '.2f'))
+print("Tax: 7%")
+print(format(total_with_taxes, '.2f'))
