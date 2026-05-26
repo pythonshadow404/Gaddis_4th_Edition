@@ -1,0 +1,9 @@
+cel = int(input("Enter Celsius: "))
+fahr = (9/5) * cel + 32
+# Common String Methods: Unicode Name, Unicode Hex Code, and Built-in chr() Function
+#print(f"Temperature: 25\N{DEGREE SIGN}C")
+#print("The angle is 45\u00b0")
+#symbol = chr(176)
+print("Fahrenheit: ", fahr,"\N{DEGREE SIGN}F", sep='')
+print("Fahrenheit: ", fahr,"\u00b0F", sep='')
+print("Fahrenheit: ", fahr, chr(176),"F", sep='')
