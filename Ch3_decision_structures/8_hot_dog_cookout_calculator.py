@@ -19,6 +19,7 @@ buns_per_package = 8
 
 # total items needed
 total_hot_dogs_needed = people * hot_dogs_per_person
+#In the logic of the program, every hot dog requires exactly one bun:
 total_buns_needed = total_hot_dogs_needed  # one bun per hot dog
 
 # calculate packages of hot dogs
