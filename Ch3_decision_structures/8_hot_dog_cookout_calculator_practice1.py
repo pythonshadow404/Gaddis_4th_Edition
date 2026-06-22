@@ -3,7 +3,7 @@
 # BUN_PACKAGE = 8
 # guests = int(input("Enter the number guest attending event: "))
 # dogs_per_person = int(input("Enter the number hot dogs for each guest:  "))
-# total_needed = (guests * dogs_per_person)
+# total_hot_dogs_needed = guests * dogs_per_person
 # packages = (total_needed + HOT_DOG_PACKAGE -1) // HOT_DOG_PACKAGE
 # leftover = packages * HOT_DOG_PACKAGE - total_needed
 # total_buns = guests * BUN_PACKAGE
@@ -11,7 +11,9 @@
 # print("Packages to buy:", packages)
 # print("Leftover hot dogs:", leftover)
 
-people = 35
+### Hot dogs per package is different from hot dog packages that I need to serve my guests.  However, you need hot dogs per package to calculate hot dog packages.
+
+people = 37
 hot_dogs_per_person = 2
 
 hot_dogs_per_package = 10
@@ -23,13 +25,22 @@ total_hot_dogs_needed = people * hot_dogs_per_person
 total_buns_needed = total_hot_dogs_needed  # one bun per hot dog
 
 # calculate packages of hot dogs
+#A gentle way to read this line is to treat it like a yes/no question your program is asking:
+# The best way to read it in plain English
+# “Does the number of hot dogs needed divide evenly into packages with no leftovers?”
+
+# That’s it.
+# That’s the whole meaning.
+# “What is the remainder when I divide the total hot dogs needed by the package size?”
 if total_hot_dogs_needed % hot_dogs_per_package == 0:
     hot_dog_packages = total_hot_dogs_needed // hot_dogs_per_package
 else:
-    
+    #This section only matters when you have more people than hot dogs
+    hot_dog_packages = total_hot_dogs_needed // hot_dogs_per_package + 1
 
 # calculate packages of buns
-if 
+if total_buns_needed % buns_per_package == 0:
+    total_buns_needed = total_buns_needed // buns_per_package
 else:
     bun_packages = total_buns_needed // buns_per_package + 1
 
